@@ -28,9 +28,9 @@ class App extends React.Component {
 
       const { subjects } = this.state
       console.log('subjects', subjects)
-      this.setSubjects(subjects.concat(
-        sort(normalizeData(data))
-      ), { shouldUpdateCache: true })
+      this.setSubjects(sort(subjects.concat(
+        normalizeData(data)
+      )), { shouldUpdateCache: true })
 
       const linkHeader = xhr.getResponseHeader('link')
       if (!linkHeader) {
